@@ -11,6 +11,10 @@ $(call inherit-product, device/asus/sdm660-common/sdm660.mk)
 TARGET_SCREEN_HEIGHT := 2160
 TARGET_SCREEN_WIDTH := 1080
 
+# FrameworksRes Overlay
+PRODUCT_PACKAGES += \
+    X00TDFrameworksResOverlay
+
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += \
     $(LOCAL_PATH)/overlay
@@ -18,6 +22,10 @@ DEVICE_PACKAGE_OVERLAYS += \
 # Ramdisk
 PRODUCT_PACKAGES += \
     init.device.rc
+
+# SystemUI Overlay
+PRODUCT_PACKAGES += \
+    X00TDSystemUIOverlay
 
 # Thermal configs
 PRODUCT_COPY_FILES += \
